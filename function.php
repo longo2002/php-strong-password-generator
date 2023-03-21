@@ -8,7 +8,7 @@ $useLowercase = boolval($_GET["useLowercase"]);
 $useNumbers = boolval($_GET["useNumbers"]);
 $useSymbols = boolval($_GET["useSymbols"]);
 
-function generatePassword($length, $useLowercase = true, $useUppercase = true, $useNumbers = true, $useSymbols = true) {
+function generatePassword($length, $useLowercase = false, $useUppercase = false, $useNumbers = false, $useSymbols = false) {
     $chars = '';
     if ($useLowercase) {
         $chars .= 'abcdefghijklmnopqrstuvwxyz';
@@ -47,27 +47,8 @@ $password = generatePassword($length, $useLowercase, $useUppercase , $useNumbers
 <body>
     <div class="container">
         <div class="card">
-            <h1>Generatore di password</h1>
-            <div class="form_container">
-                <form method="GET" action="./function.php">
-                    <label for="length">Lunghezza:</label>
-                    <input type="number" name="length" id="length" min="8" max="64" value="16" required>
-
-                    <label for="uppercase">Maiuscole:</label>
-                    <input type="checkbox" name="useUppercase" id="uppercase" checked>
-
-                    <label for="lowercase">Minuscole:</label>
-                    <input type="checkbox" name="useLowercase" id="lowercase" checked>
-
-                    <label for="numbers">Numeri:</label>
-                    <input type="checkbox" name="useNumbers" id="numbers" checked>
-
-                    <label for="symbols">Simboli:</label>
-                    <input type="checkbox" name="useSymbols" id="symbols" checked>
-
-                    <input class="btn" type="submit" value="Genera">
-                </form>
             <h1>
+            La tua password é:
             <?php echo $password ?>
             </h1>
             </div>
