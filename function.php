@@ -10,7 +10,7 @@ $useSymbols = boolval($_GET["useSymbols"]);
 
 function generatePassword($length, $useLowercase = false, $useUppercase = false, $useNumbers = false, $useSymbols = false) {
     $chars = '';
-    if ($useLowercase) {
+    if ($useLowercase === true) {
         $chars .= 'abcdefghijklmnopqrstuvwxyz';
     }
     if ($useUppercase) {
