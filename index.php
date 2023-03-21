@@ -19,7 +19,7 @@
                     <input type="number" name="length" id="length" min="8" max="64" value="16" required>
 
                     <label for="uppercase">Maiuscole:</label>
-                    <input type="checkbox" name="useUppercase" id="uppercase" >
+                    <input type="checkbox" name="useUppercase" id="uppercase" checked>
 
                     <label for="lowercase">Minuscole:</label>
                     <input type="checkbox" name="useLowercase" id="lowercase" >
