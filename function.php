@@ -3,10 +3,10 @@
 $data = $_GET;
 
 $length = $_GET["length"];
-$useUppercase = boolval($_GET["useUppercase"]);
-$useLowercase = boolval($_GET["useLowercase"]);
-$useNumbers = boolval($_GET["useNumbers"]);
-$useSymbols = boolval($_GET["useSymbols"]);
+$useUppercase = boolval($_GET["useUppercase"]  ?? '');
+$useLowercase = boolval($_GET["useLowercase"]  ?? '');
+$useNumbers = boolval($_GET["useNumbers"]  ?? '');
+$useSymbols = boolval($_GET["useSymbols"]  ?? '');
 
 function generatePassword($length, $useLowercase = false, $useUppercase = false, $useNumbers = false, $useSymbols = false) {
     $chars = '';
